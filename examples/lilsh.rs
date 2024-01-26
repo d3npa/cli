@@ -17,17 +17,13 @@ fn main() {
         prompt("> ", |command, args| match command {
             "help" => print_help(),
             "ping" => println!("pong!"),
-            "echo" => {
-                println!("{}", &args[1..].join(" "));
-            }
+            "echo" => println!("{}", &args[1..].join(" ")),
             "exit" => {
                 println!("cleaning up...");
                 // cleanup
                 std::process::exit(0);
             }
-            _ => {
-                println!("unknown command: '{command}'")
-            }
+            _ => println!("unknown command: '{command}'"),
         });
     }
 }
