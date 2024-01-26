@@ -20,7 +20,7 @@ fn main() {
             "echo" => println!("{}", &args[1..].join(" ")),
             "exit" => {
                 println!("cleaning up...");
-                // cleanup
+                // do cleany up things
                 std::process::exit(0);
             }
             _ => println!("unknown command: '{command}'"),
